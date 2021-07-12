@@ -8,6 +8,54 @@
     <link rel="stylesheet" href="newvikash.css">
 </head>
 <body>
-    <h1>new project</h1>
+    <div>
+    <h1>STUDENT <br> GRADE <br> CALCY</h1>
+
+    <form action="">
+  <input type="number" id="phy" value="" placeholder="PHYSICS MARKS"><br><br><br>
+  <input type="number" id="che" value="" placeholder="CHEMISTRY MARKS"><br><br><br>
+  <input type="number" id="math" value="" placeholder="MATHEMATICS MARKS"><br><br><br>
+  <input type="number" id="hin" value="" placeholder="HINDI MARKS"><br><br><br>
+  <input type="number" id="eng" value="" placeholder="ENGLISH MARKS"><br><br><br>
+  <input type="button" value="SHOW PERCENTGE" onclick="myfun()">
+    </form>
+<p id="output"> </p>    
+    </div>
+    <script>
+        const myfun = () => {
+     const   phy = document.getElementById("phy").value;
+      const  che = document.getElementById("che").value;
+     const   math = document.getElementById("math").value;
+     const   hin = document.getElementById("hin").value;
+      const  eng = document.getElementById("eng").value;
+      let grade ="";
+     
+        const total = parseFloat(phy) + parseFloat(che) + parseFloat(math) + parseFloat(hin) + parseFloat(eng);
+       /** alert( total);**/
+    
+    const perc = (total/5);
+   /** alert(perc); **/
+
+    
+    if(perc <= 100 && perc >= 80){
+      grade = 'A';
+    }else if( perc < 80 && perc >= 60){
+         grade = 'B';
+    }else if(perc < 60 && perc >=40){
+         grade = 'C';
+    }else{
+         grade ='F';
+    }
+   /** alert(grade); **/
+    if(perc >= 40){
+      document.getElementById("output").innerHTML = ` Out of 500 your total is ${total}
+      and percentage is ${perc}%. <br>       your grade is ${grade}. you are pass.`;
+
+    }else{
+      document.getElementById("output").innerHTML = ` Out of 500 your total is ${total}
+      and percentage is ${perc}%. <br> your grade is ${grade}. you are fail.`;
+    }
+      }
+    </script>
 </body>
 </html>

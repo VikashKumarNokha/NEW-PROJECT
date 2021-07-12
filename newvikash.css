@@ -1,7 +1,54 @@
 body{
     background-color: aqua;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+div{
+    background-color: black;
+    width: 60vw;
+    height: 60vh;
+    position: absolute;
+    margin-top: 20vh;
+    margin-left:20vw ;
+    border-radius: 20px;
+    box-shadow: 5px 5px  rgba(0, 0, 0, 0.8);
 }
 h1{
-    background-color: brown;
-    color: wheat;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 130px;
+    color: aqua;
+
+}
+input[type="number"]{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid wheat;
+    background: black;
+    padding-bottom: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    width: 250px;
+    height: 20px;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 40px;
+    
+}
+input[type="button"]{
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 20px;
+    background-color: black;
+    border: none;
+    color: aqua;
+}
+p{
+    color: white;
+    margin-left: 170px;
+    margin-top: 50px;
+    font-size: 25px;
+
 }
